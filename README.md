@@ -8,4 +8,4 @@ sudo apg-get install libhtmlcxx-dev
 sudo apg-get install libcurl4-openssl-dev
 ```
 在编译时添加选项 -lcurl -lhtmlcxx即可
-我在qtcreator上进行开发，因此保留罗qt的相关问题，请按需使用或忽略之。
+我在qtcreator上进行开发，因此保留了qt的相关文件，请按需使用或忽略之。
