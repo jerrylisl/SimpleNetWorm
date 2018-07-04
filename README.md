@@ -8,5 +8,5 @@
 sudo apg-get install libhtmlcxx-dev
 sudo apg-get install libcurl4-openssl-dev
 ```
-之后可make编译
+之后可make编译: make CXXFLAGS="-std=c++11 -lcurl -lhtmlcxx"
 在qtcreator上进行开发，因此保留了qt的相关文件，请按需使用或忽略之。

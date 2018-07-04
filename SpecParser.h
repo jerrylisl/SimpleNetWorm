@@ -28,8 +28,8 @@ public:
 
 
 private:
-    static std::string urls[];
-    static std::string urlHosts[];
+    static std::string urls[4];
+    static std::string urlHosts[4];
 
     HOST _host;
     NetBug _worker;
