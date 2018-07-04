@@ -4,6 +4,7 @@
 #include<htmlcxx/html/ParserDom.h>
 #include<vector>
 #include<iostream>
+#include<unordered_map>
 
 using namespace htmlcxx;
 
@@ -39,11 +40,14 @@ public:
         return _host;
     }
 
+    std::pair<std::string, std::string> getTitles(std::string name);  //如果a标签有该属性，搜索之
+
 private:
     std::string _page;
     std::string _host;
     HTML::ParserDom _parser;
     tree<HTML::Node> _dom;
+    std::unordered_map<std::string, std::string> _titles;
 };
 
 #endif // PARSER

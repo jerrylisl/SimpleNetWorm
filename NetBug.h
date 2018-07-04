@@ -1,8 +1,8 @@
 #ifndef NETBUG
 #define NETBUG
 
-#include<Parser.h>
-#include<Hooker.h>
+#include"Parser.h"
+#include"Hooker.h"
 #include<string>
 #include<vector>
 #include<queue>

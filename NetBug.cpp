@@ -1,4 +1,4 @@
-#include<NetBug.h>
+#include"NetBug.h"
 
 NetBug::urlResult NetBug::findByTitle(std::string name)
 {
@@ -18,8 +18,11 @@ NetBug::urlResult NetBug::findByTitle(std::string name)
             if (t == 0)
             {
                 auto tparser = Parser(thooker.getPage(), thooker.getHost());
+
                 if (tparser.getTitle().find(name) != std::string::npos)
                     return NetBug::urlResult(tparser.getTitle(), url.second.first);
+                if (tparser.getTitles(name).first != "")
+                    return NetBug::urlResult(tparser.getTitles(name).first, tparser.getTitles(name).second);
                 auto res = tparser.getLinks();
                 for (int i = 0; i < res.size(); ++ i)
                 {

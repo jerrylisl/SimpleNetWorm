@@ -1,8 +1,7 @@
 #ifndef SPECPARSER
 #define SPECPARSER
 
-#include<Parser.h>
-#include<Hooker.h>
+#include"NetBug.h"
 #include<vector>
 #include<string>
 
@@ -10,12 +9,31 @@ class SpecParser
 {
 public:
     //特定站点的抓取
-    enum HOST {DOUYU, QUANMIN, PANDA, HUYA};
-    explicit SpecParser(HOST host);
+    using urlResult = std::pair<std::string, std::string>;
+    enum HOST {QUANMIN, DOUYU, PANDA, HUYA};
+    explicit SpecParser(HOST host)
+        : _host(host),
+          _worker()
+    {
+        _worker.addUrl(urls[_host], urlHosts[_host]);
+    }
+
+    urlResult search(std::string name)
+    {
+        return _worker.findByTitle(name);
+    }
+
+
+
+
 
 private:
-    static std::vector<string> _hostTable;
+    static std::string urls[];
+    static std::string urlHosts[];
+
     HOST _host;
+    NetBug _worker;
+
 
 };
 

@@ -13,7 +13,8 @@ SOURCES += \
     Hooker.cpp \
     NetBug.cpp \
     Parser.cpp \
-    test.cpp
+    test.cpp \
+    SpecParser.cpp
 
 HEADERS += \
     Hooker.h \
