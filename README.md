@@ -13,7 +13,7 @@ sudo apg-get install libcurl4-openssl-dev
 之后可make编译: make CXXFLAGS="-std=c++11 -lcurl -lhtmlcxx"
 
 
-重新组织了搜索顺序，添加了指定单个站点的搜索  2018.7.4
+重新组织了搜索顺序，添加了指定单个站点的搜索
 
 修改了搜索顺序，在搜索本页title后，会判断a标签中潜在的title属性，并作为搜索项（对个别站点有效）
 
